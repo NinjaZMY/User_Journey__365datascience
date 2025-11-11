@@ -1,5 +1,5 @@
 
-
+    1. PreProcessing the Data
 
 In this project, you are provided with data containing the user journeys of people who bought our product. You need to create Python programs to analyze the sequence of visited pages with the objective of improving the front page flow and identifying which pages are important.
 But before analyzing this data, you must first clean it and prepare it for the next step.
