@@ -26,3 +26,12 @@ sessions - the number of sessions to group; if it's the string 'All', consider a
 count_from- either 'first'; or 'last'; indicates what to group if the session parameter is an integer-e.g., if sessions is 10 and count_from is 'last', the function should group only the last 10 sessions (the grouping order should still remain the same from the earliest to latest session) (default is 'last')
 Output: The function should return a new dataframe that contains the grouped strings. It should not modify the supplied one.
 
+The final function that remains removes unnecessary pages from the data. (Not all pages are essential in a user journey analysis.) Perhaps prompts like 'log in' should be removed. But this is not something we can hardcode into the preprocessing because it's a decision that the data scientist can make and tinker with. That's why we should create a function that can be called upon later if needed.
+Note the details below:
+Example name: remove_pages
+Input parameters:
+data: the dataframe
+pages - a list containing the strings of all the pages to be removed
+target_column - the name of the column containing the strings (default is 'user_journey')
+Output: Return a new dataframe with the removed pages
+Now that you've created all these functions, you can use them on the data to generate the CSV you'll utilize in the next part of the project. At this point, you can use some default settings, such as grouping all sessions and not excluding any pages from the journey yet. Just make sure that you remove the duplicates only after you've used the other two functions.
